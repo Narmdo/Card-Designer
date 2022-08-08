@@ -58,7 +58,7 @@ export default class Card extends React.Component
             }
         });
 
-        pattern = /".*?"/g;
+        pattern = /"[^"]*?\.png"/g;
 
         html = html.replace(pattern, (a, b) =>
         {

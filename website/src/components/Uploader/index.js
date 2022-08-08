@@ -100,7 +100,8 @@ export default class Uploader extends React.Component
             selectedHtml:htmls[0],
             selectedCss:csss[0],
             selectedCsv:csvs[0],
-            content : { ...this.state.content, images:imageUrls },
+            
+            images:imageUrls,
         });
     }
 
@@ -114,9 +115,19 @@ export default class Uploader extends React.Component
 
     componentDidUpdate(oldProps, oldState)
     {
-        if (this.state.content !== oldState.content)
+        if (this.state.images !== oldState.images ||
+            this.state.html !== oldState.html ||
+            this.state.css !== oldState.css ||
+            this.state.csv !== oldState.csv ||
+            this.state.json !== oldState.json)
         {
-            this.props.selectionChanged(this.state.content);
+            this.props.selectionChanged({
+                images: this.state.images,
+                html: this.state.html,
+                css: this.state.css,
+                csv: this.state.csv,
+                json: this.state.json
+            });
         }
 
         if (this.state.selectedJson !== oldState.selectedJson)
@@ -154,7 +165,7 @@ export default class Uploader extends React.Component
         {
             if (this.state.selectedJson === selected)
             {
-                this.setState({content:{...this.state.content, json:JSON.parse(file.target.result)}});
+                this.setState({ json:JSON.parse(file.target.result)});
             }
         };
 
@@ -175,7 +186,7 @@ export default class Uploader extends React.Component
         {
             if (this.state.selectedHtml === selected)
             {
-                this.setState({content:{...this.state.content, html:file.target.result}});
+                this.setState({html:file.target.result});
             }
         };
 
@@ -196,7 +207,7 @@ export default class Uploader extends React.Component
         {
             if (this.state.selectedCss === selected)
             {
-                this.setState({content:{...this.state.content, css:file.target.result}});
+                this.setState({css:file.target.result});
             }
         };
 
@@ -219,7 +230,7 @@ export default class Uploader extends React.Component
             {
                 var parsed = Papa.parse(file.target.result.trim(), {header:true});
                 
-                this.setState({content:{...this.state.content, csv:parsed.data}});
+                this.setState({csv:parsed.data});
             }
         };
 
