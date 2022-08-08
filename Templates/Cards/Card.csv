@@ -1,0 +1,8 @@
+﻿Name,Description,Image,Background,Health
+Giant Troll,Deal 7 damage,Troll1.png,Cloudy.png,6
+Troll Craftsman,Repair a structure to full health,Troll2.png,Waterfall.png,3
+Troll Brute,Take 1 damage<br/>Deal 3 damage,Troll3.png,Mountains.png,5
+Shining Knight,Protect another creature,Knight1.png,Night Trees.png,2
+Green Goo,Change form to another creature,Troll1.png,Waterfall.png,3
+Hammer,Attach to a structure to give it 5 extra health,Troll2.png,Mountains.png,5
+Bone dude,Deal 4 damage,Troll3.png,Cloudy.png,5

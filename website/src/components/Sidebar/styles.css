@@ -1,0 +1,52 @@
+.App-sidebar
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1;
+
+    position: -webkit-sticky;
+    position: sticky;
+
+    background-color: #EEEEEE;
+
+    top: 0px;
+
+    width: 285px;
+    height: calc(100vh - 50px);
+
+    flex-grow: 0;
+
+    padding: 25px;
+    padding-left: 40px;
+}
+
+.sidebar-fields
+{
+    overflow-y: scroll;
+
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-field
+{
+    width: 100%;
+    
+    text-align: left;
+}
+
+.sidebar-field h1
+{
+    font-size: 16px; 
+
+    margin-bottom: 5px;
+}
+
+.sidebar-field p
+{
+    margin-top: 0px;
+
+    font-size: 16px;
+}

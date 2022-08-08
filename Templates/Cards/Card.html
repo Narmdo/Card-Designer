@@ -1,0 +1,29 @@
+<div class="bleed">
+	<div class="card">
+		<div class="background" style='background-image: url("img/Art/Backgrounds/{{Background}}")'></div>
+
+		<div class="art" style='background-size: contain; background-image: url("img/Art/Creatures/{{Image}}")'></div>
+
+		<div class="frame"></div>
+
+		<div class="title"></div>
+
+		<div class="health" style="max-height: {{Health}}000px;">
+			<p>{{Health}}</p>
+		</div>
+
+		<svg class="name" height="100%" width="100%" viewBox="0 0 100 100">
+			<!--Adjusting the curve: Position: adjust m[x],[y]. Curve: adjust a50,[17]-->
+			<path d="m0,78 a50,17 0 0 1 100,0" id="curve" fill="none"/>
+			<text width="2">
+				<textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+					{{Name}}
+				</textPath>
+			</text>
+		</svg>
+
+		<div class="description">
+			<p>{{Description}}</p>
+		</div>
+	</div>
+</div>

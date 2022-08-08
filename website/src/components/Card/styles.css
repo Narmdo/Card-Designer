@@ -1,0 +1,14 @@
+.cardContainer
+{
+    width:fit-content;
+    height:fit-content;
+
+    user-select: none;
+    
+    padding: 10px;
+}
+
+.cardContainer.selected
+{
+    background-color: #AA4444;
+}

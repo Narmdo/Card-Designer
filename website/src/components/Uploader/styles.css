@@ -1,0 +1,21 @@
+.uploader
+{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+
+    z-index: 1;
+    background-color: #EEEEEE;
+
+    width: 90%;
+    display: flex;
+    
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.uploader div
+{
+    min-width: 200px;
+    flex-grow: 1;
+}
